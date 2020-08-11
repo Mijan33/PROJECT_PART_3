@@ -1,0 +1,601 @@
+<!--Created by mizanur ------>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Module.css">
+  <title>Youth Health care</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    .ml6 {
+      position: relative;
+      font-weight: 900;
+      font-size: 3.3em;
+    }
+
+    .ml6 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.2em;
+      padding-right: 0.05em;
+      padding-bottom: 0.1em;
+      overflow: hidden;
+    }
+
+    .ml6 .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
+
+    .ml12 {
+      font-weight: 200;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
+
+    .ml12 .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
+
+    details {
+      position: relative;
+    }
+
+    details summary {
+      display: block;
+      cursor: pointer;
+      color: red;
+    }
+
+    details summary:focus {
+      outline: none;
+    }
+
+    details[open] {
+      display: block;
+      padding-bottom: 25px;
+      padding-top: 10px;
+      animation: open .2s linear;
+    }
+
+    details[open] summary {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    details #open {
+      padding-left: 5px;
+      text-align: middle;
+    }
+
+    details #open:after {
+      display: inline-block;
+      position: relative;
+      top: -3px;
+      padding-left: 8px;
+      content: "\00bb";
+      transform: rotate(90deg);
+    }
+
+    details[open] #open {
+      display: none;
+    }
+
+    details #close {
+      display: none;
+    }
+
+    details[open] #close {
+      display: block;
+    }
+
+    ::-webkit-details-marker {
+      display: none;
+    }
+
+    .bs-calltoaction {
+      position: relative;
+      width: auto;
+      padding: 15px 25px;
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .bs-calltoaction>.row {
+      display: table;
+      width: calc(100% + 30px);
+    }
+
+    .bs-calltoaction>.row>[class^="col-"],
+    .bs-calltoaction>.row>[class*=" col-"] {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .cta-contents {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .cta-title {
+      margin: 0 auto 15px;
+      padding: 0;
+    }
+
+    .cta-desc {
+      padding: 0;
+    }
+
+    .cta-desc p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cta-button {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .bs-calltoaction>.row {
+        display: block;
+        width: auto;
+      }
+
+      .bs-calltoaction>.row>[class^="col-"],
+      .bs-calltoaction>.row>[class*=" col-"] {
+        float: none;
+        display: block;
+        vertical-align: middle;
+        position: relative;
+      }
+
+      .cta-contents {
+        text-align: center;
+      }
+    }
+
+
+
+    .bs-calltoaction.bs-calltoaction-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+    }
+
+    .bs-calltoaction.bs-calltoaction-primary {
+      color: #fff;
+      background-color: #337ab7;
+      border-color: #2e6da4;
+    }
+
+    .bs-calltoaction.bs-calltoaction-info {
+      color: #fff;
+      background-color: #5bc0de;
+      border-color: #46b8da;
+    }
+
+    .bs-calltoaction.bs-calltoaction-success {
+      color: #fff;
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+    }
+
+    .bs-calltoaction.bs-calltoaction-warning {
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #eea236;
+    }
+
+    .bs-calltoaction.bs-calltoaction-danger {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+
+    .bs-calltoaction.bs-calltoaction-primary .cta-button .btn,
+    .bs-calltoaction.bs-calltoaction-info .cta-button .btn,
+    .bs-calltoaction.bs-calltoaction-success .cta-button .btn,
+    .bs-calltoaction.bs-calltoaction-warning .cta-button .btn,
+    .bs-calltoaction.bs-calltoaction-danger .cta-button .btn {
+      border-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- headersection--->
+  <div class="headersection templete clear">
+
+    <div class="logo"></div>
+    <img src="Images/Logo.jpeg" height="85px" ; width="100" alt="Logo">
+    <p>We are ready to serve </p>
+
+
+
+  </div>
+
+
+
+
+  <!--Nevigation section--->
+  <div class="navsection templete clear">
+    <ul>
+      <li><a href="Support.html"> Support </a></li>
+      <li><a href="Modules.html"> Modules </a></li>
+      <li><a href="feature.html"> Feature </a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="Home.html"> Home </a></li>
+
+    </ul>
+  </div>
+  <!--Maincontentsection--->
+  <div class="contentsection templete clear">
+    <div class="Maincontent clear">
+      <div class="jumbotron">
+        <h1 class="display-4">Our Health Care Features</h1>
+        <p class="lead"> The flexibility of youth care service like –Patient management for inpatient & outpatient,
+          billing & billing & another department. <br> <br>
+          <hr class="my-4">
+          Outpatient management <br>
+          Inpatient management <br>
+          Pharmacy <br>
+          Financial report <br>
+          Attendance Report <br>
+          Online Patient portal <br>
+        </p>
+
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+      <div class="card text-white bg-primary mb-3 " style="max-width: 18rem; display: inline-block;">
+        <div class="card-header">Patient Management</div>
+        <div class="card-body">
+          <h5 class="card-title">Read More</h5>
+          <p class="card-text">
+
+            A description of the interaction, from intake to discharge, between the patient and the health care team. It
+            includes communication, empathy, examination, evaluation, diagnosis, prognosis, and intervention. The last
+            element, intervention (or treatment), depends on the others.
+          </p>
+        </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;display: inline-block">
+        <div class="card-header">Pharmacy</div>
+        <div class="card-body">
+          <h5 class="card-title">Read More</h5>
+          <p class="card-text">
+
+            Pharmacy is the health science that links medical science with chemistry and it is charged with the
+            discovery, production, control, disposal, safe and effective use of drugs. The practice of pharmacy requires
+            excellent knowledge of drugs, of action, side effects, interactions, mobility and toxicity. </p>
+        </div>
+      </div>
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem;display: inline-block">
+        <div class="card-header">Financial report</div>
+        <div class="card-body">
+          <h5 class="card-title">Read More</h5>
+          <p class="card-text">
+            Financial statements (or financial reports) are formal records of the financial activities and position of a
+            business, person, or other entity. ... A balance sheet or statement of financial position, reports on a
+            company's assets, liabilities, and owners equity at a given point in time.
+          </p>
+        </div>
+      </div>
+      <div class="bs-calltoaction bs-calltoaction-info">
+        <div class="row">
+          <div class="col-md-9 cta-contents">
+            <h1 class="cta-title">
+              We provide best services
+            </h1>
+            <div class="cta-desc">
+            </div>
+          </div>
+          <div class="col-md-3 cta-button">
+            <a href="#" class="btn btn-lg btn-block btn-info">Call Our Support</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Patient Management
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+
+              A description of the interaction, from intake to discharge, between the patient and the health care team.
+              It includes communication, empathy, examination, evaluation, diagnosis, prognosis, and intervention. The
+              last element, intervention (or treatment), depends on the others
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Pharmacy
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+
+              Pharmacy is the health science that links medical science with chemistry and it is charged with the
+              discovery, production, control, disposal, safe and effective use of drugs. The practice of pharmacy
+              requires excellent knowledge of drugs, their mechanism of action, side effects, interactions, mobility and
+              toxicity.
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Financial Management </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+
+              Financial statements (or financial reports) are formal records of the financial activities and position of
+              a business, person, or other entity. ... A balance sheet or statement of financial position, reports on a
+              company's assets, liabilities, and owners equity at a given point in time.
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="samepost ">
+        <center>
+          <h2 class="ml6">
+            <span class="text-wrapper">
+              <span class=""></span></span>
+            </span>
+          </h2>
+        </center>
+
+
+        <div Style="font-size:20px;text-align:center;">
+
+
+
+
+
+        </div><br><br>
+        <div Style="font-size:20px;text-align:center;">
+
+        </div>
+        <br><br>
+
+        <div Style="font-size:20px;text-align:center;">
+
+        </div><br><br>
+        <div Style="font-size:20px;text-align:center;">
+
+        </div>
+        <br>
+
+        <div Style="font-size:20px;text-align:center;"><br><br>
+
+        </div>
+
+        <div Style="font-size:20px;text-align:center;"><br><br>
+
+        </div><br><br>
+
+        <div class="ADDITIONAL MODULES  templete clear ">
+
+        </div>
+        <div style="margin-left:100px;">
+
+        </div>
+      </div>
+    </div>
+    <!--footersection--->
+    <div class="footersection  templete clear" style="width:930px; padding:50px;">
+
+      <h2 style="text-align:center; color:white; font-size:20px;">CONTACT US<h2><br>
+          <h3 style="text-align:center;">Corporate office</h3>
+
+          <p style="padding-bottom:40px">
+            House:77, level 2,</br> road 2 kualalumpur-Malaysia. Whatsapp: 0113776532<br />
+            www.YouthHealthCare.com<br>
+            www.Facebook/YouthHealthCare.com <br>
+            @Copyright Mohammad Raihanul Islam
+          </p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml12 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml12 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml13');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml13 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml13 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml14');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml14 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml14 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml15');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml15 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml15 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml17');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml17 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml17 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+  </script>
+
+  <script type="text/javascript">
+    var textWrapper = document.querySelector('.ml18');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml18 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml18 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+
+  </script>
+
+  <script> var textWrapper = document.querySelector('.ml9 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+      .add({
+        targets: '.ml9 .letter',
+        translateY: ["1.1em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: (el, i) => 50 * i
+      }).add({
+        targets: '.ml9',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
